@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/log', 'HomeController@login');
-Route::get('/sign', 'HomeController@sign');
-Route::get('/blog', 'HomeController@blog');
-Route::get('/about', 'HomeController@aboutus');
-Route::get('/contact', 'HomeController@contactus');
+Route::middleware(['HtmlMinifier'])->group(function(){
+  Route::get('/', 'HomeController@index')->name('home');
+  // Route::get('/log', 'HomeController@login');
+  // Route::get('/sign', 'HomeController@sign');
+  Route::get('/blog', 'HomeController@blog');
+  Route::get('/about', 'HomeController@aboutus');
+  Route::get('/contact', 'HomeController@contactus');
+});

@@ -12,11 +12,7 @@
     <title>HRMS</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 
-    <!--Core CSS -->
-    <link rel="stylesheet" href="assets/css/bulma.css" />
-    <link rel="stylesheet" href="assets/css/app.css" />
-    <link rel="stylesheet" href="assets/css/core_startup.css" />
-    <link rel="stylesheet" href="assets/css/core_agency.css" />
+    <link rel="stylesheet" href="{{asset('assets/bundle/app.css')}}" />
   </head>
 
   <body>
@@ -112,14 +108,7 @@
 
     <!-- Back To Top Button -->
     <div id="backtotop"><a href="javascript:;"></a></div>
-    <!-- Concatenated jQuery and plugins -->
-    <script src="assets/js/app.js"></script>
-
-    <!-- Bulkit js -->
-    <script src="assets/js/functions.js"></script>
-    {{-- <script src="assets/js/auth.js"></script> --}}
-    <script src="assets/js/contact.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('assets/bundle/app.js')}}"></script>
 
     <!-- Custom js-->
     @yield('footer-js')

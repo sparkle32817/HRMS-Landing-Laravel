@@ -14,14 +14,14 @@ class HomeController extends BaseController
 	}
 
 	//temp
-	public function login() {
-		return view('auth.login');
-	}
+	// public function login() {
+	// 	return view('auth.login');
+	// }
 
-	//temp
-	public function sign() {
-		return view('auth.signup');
-	}
+	// //temp
+	// public function sign() {
+	// 	return view('auth.signup');
+	// }
 
 	public function aboutus(){
 		return view('pages.home.about');
